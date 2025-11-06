@@ -5,25 +5,41 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <ImageView
         android:layout_width="wrap_content"
+        android:layout_height="229dp"
+        android:contentDescription="Logo of Ron's Pizza Joint."
+        android:src="@drawable/ronspizzajointlogo" />
+
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/statefarelogo"
-        android:contentDescription="Logo of State Fare. Catonsville, MD."
+        android:text="100 Kane St."
+        android:textSize="50sp"
+        android:typeface="serif"
+        android:textColor="@color/black"
+        style="@style/squareButton"
+        android:backgroundTint="@color/white"
+        android:id="@+id/locationBTN"
         />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Catonsville, MD"
+        android:text="Baltimore, MD"
         android:textSize="50sp"
         android:typeface="serif"
+        android:textColor="@color/black"
         />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        android:text="(410)-788-3273"
+        android:text="(443)-902-5999"
         />
     <Button
         android:layout_width="wrap_content"
