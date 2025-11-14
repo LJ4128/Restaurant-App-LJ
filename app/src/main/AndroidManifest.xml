@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RestaurantApp">
         <activity
-            android:name=".FoodBrowser"
+            android:name=".OrderScreen"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
