@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
+    android:background="@color/white"
     >
     <LinearLayout
 
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:text="Add a pizza?"
             android:textSize="50sp"
+            android:textColor="@color/black"
             />
 
         <Button
@@ -29,9 +31,16 @@
             android:backgroundTint="@color/white"
             android:text="+"
             android:textColor="@color/black"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:id="@+id/pizzaBTN"
+            />
 
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,6 +48,7 @@
         android:gravity="center"
         android:orientation="vertical"
         android:id="@+id/pizzaPanel"
+        android:background="@color/light_grey"
         >
         <TableRow
             android:layout_height="wrap_content"
@@ -77,6 +87,7 @@
                 android:text="+"
                 android:textColor="@color/black"
                 android:textSize="32sp"
+                android:id="@+id/toppingsBTN"
                 />
 
         </TableRow>
@@ -91,49 +102,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pepperoni"
+                android:id="@+id/pepperoniCB"
                 android:textSize="32sp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sausage"
-                android:textSize="32sp"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bacon"
+                android:id="@+id/sausageCB"
                 android:textSize="32sp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ham"
+                android:id="@+id/hamCB"
                 android:textSize="32sp"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pineapple"
-                android:textSize="32sp"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chicken"
-                android:textSize="32sp"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Peppers"
-                android:textSize="32sp"/>
+
 
         </LinearLayout>
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Extra cheese?"
+            android:id="@+id/extracheeseCB"
             android:textSize="32sp"/>
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Stuffed crust?"
+            android:id="@+id/stuffedcrustCB"
             android:textSize="32sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="DONE"
+            android:id="@+id/doneBTN"
+            />
 
 
 
@@ -150,6 +154,7 @@
             android:layout_height="wrap_content"
             android:textSize="40sp"
             android:text="Check Out"
+            android:id="@+id/checkoutBTN"
             />
         <TextView
             android:layout_width="wrap_content"

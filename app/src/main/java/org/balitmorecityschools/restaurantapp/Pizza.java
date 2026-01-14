@@ -1,6 +1,7 @@
+package org.balitmorecityschools.restaurantapp;
 public class Pizza {
     private final double BASE_PRICE = 4.99;
-    private final String[] pizzaSize = {"Small 8\"", "Medium 12\"", "Large 16\"", "Extra Large 20\""};
+    private final String[] pizzaSize = {"Small-8\"", "Medium-12\"", "Large-16\""};
     private String size;
     private String toppings;
     private boolean extraCheese;
@@ -16,12 +17,12 @@ public class Pizza {
 
     }
 
-    public Pizza(String size, String toppings, boolean extraCheese, boolean stuffedCrust, double price) {
+    public Pizza(String size, String toppings, boolean extraCheese, boolean stuffedCrust) {
         this.size = size;
         this.toppings = toppings;
         this.extraCheese = extraCheese;
         this.stuffedCrust = stuffedCrust;
-        this.price = price;
+        price = priceCheck();
     }
 
     public String getSize() {
@@ -63,5 +64,34 @@ public class Pizza {
     public void setPrice(double price) {
         this.price = price;
     }
+    public double priceCheck(){
+        price = 0.00;
+        if (size.equals(pizzaSize[0])) {
+            price += BASE_PRICE;
+        } else if (size.equals(pizzaSize[1])) {
+            price += 8.99;
+        }
+        else {
+            price += 12.99;
+        }
+
+        if (toppings.contains("Pepperoni")){
+            price += 1.49;
+        }
+        if (toppings.contains("Sausage")){
+            price += 1.49;
+        }
+        if (toppings.contains("Ham")){
+            price += 1.49;
+        }
+        if (extraCheese){
+            price += 1.99;
+        }
+        if (stuffedCrust){
+            price += 2.49;
+        }
+        return price;
+    }
+
 }
 

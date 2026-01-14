@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RestaurantApp</string>
+    <string-array name="size_array">
+        <item>Small-8\"</item>
+        <item>Medium-12\"</item>
+        <item>Large-16\"</item>
+    </string-array>
 </resources>
